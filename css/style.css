@@ -152,7 +152,6 @@
 		color: #82878a;
 
 	}
-
 	.description>p {
 		color: #82878a;
 		font-size: 16px;
@@ -167,25 +166,44 @@
 	#services {
 		background-color: #0e0e0e;
 	}
+	.service {
+		height: 600px;
+	}
 	.item {
 		position: relative;
 	}
 	.bg_img {
 		font-size: 0;
-		
+		position: absolute;
+		width: 100%;
 	}
 	.img_item {
 		background: url(../img/ms_service.png);
 		display: inline-block;
 		width: calc(50% - 200px);
 		min-height: 600px;
-	
+		position: relative;
 		-webkit-background-size: cover;
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
+	.img_item:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: rgba(255, 0, 0, 0.5);
+	display: none;
+	cursor: pointer;
+	
+	}
+	.img_item:hover:before {
+		display: block;
+	}
 	.img_item:nth-child(2) {
-		width:400px;
+		width:430px;
 		background: url(../img/audi-a8.png);
 		-webkit-background-size: cover;
 		background-size: cover;
@@ -224,6 +242,9 @@
 		color: #ffffff;
 		font-weight: 300;
 		font-family: 'Open Sans', sans-serif;
+	}
+	.service_item:nth-child(3) {
+		margin-left: 50px;
 	}
 
 
